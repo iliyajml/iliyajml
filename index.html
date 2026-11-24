@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>پیکسل استودیو | استودیو تخصصی تولید محتوا در بندرگز</title>
+<meta name="description" content="پیکسل استودیو: سناریونویسی، تصویربرداری و تدوین ویدیو و ریلز در بندرگز">
+<meta name="theme-color" content="#F7F2FA">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7F2FA;--card:#fff;--ink:#24102E;--mute:#6F5F7A;--line:#E6D9EC;--tint:#F0E6F5;--pink:#E3175A;--plum:#2B0E36;
+--grad:linear-gradient(135deg,#2B0E36 0%,#8E1553 55%,#E3175A 100%)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:12px}
+body{background:var(--bg);color:var(--ink);font-family:"Vazirmatn",Tahoma,sans-serif;line-height:1.9;padding-bottom:200px;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+
+/* هیرو */
+.hero{position:relative;text-align:center;padding:48px 0 40px;overflow:hidden}
+#px{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.hero .wrap{position:relative;z-index:1}
+.logo{width:110px;height:110px;border-radius:50%;box-shadow:0 12px 0 var(--pink);animation:pop 1s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes pop{from{transform:scale(.3) rotate(-30deg);opacity:0}}
+.hero h1{font-size:clamp(2.4rem,11vw,3.6rem);font-weight:900;margin-top:34px;line-height:1.2}
+.sub{color:var(--mute);margin-top:6px}
+.bar{width:64px;height:5px;border-radius:9px;background:var(--grad);margin:26px auto}
+.hero h2{font-size:clamp(1.5rem,6vw,2.1rem);font-weight:900}
+.hero p.d{color:var(--mute);margin:6px 0 26px}
+.btn{display:flex;justify-content:center;align-items:center;gap:10px;padding:14px;border-radius:999px;font-weight:700;margin-top:12px;transition:transform .2s,box-shadow .2s}
+.btn.p{background:var(--grad);color:#fff;box-shadow:0 10px 24px rgba(227,23,90,.28)}
+.btn.o{border:2px solid var(--line);background:rgba(255,255,255,.7)}
+.btn:active{transform:scale(.97)}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:26px}
+.chip{background:var(--tint);border:1px solid var(--line);padding:3px 18px;border-radius:999px;font-size:.92rem}
+
+section{padding:56px 0 8px}
+.eyebrow{color:var(--pink);font-weight:700}
+h3.t{font-size:clamp(1.7rem,6vw,2.3rem);font-weight:900;line-height:1.5}
+.lead{color:var(--mute);margin:6px 0 26px}
+
+/* کارت نمونه‌کار */
+.card{background:var(--card);border-radius:28px;padding:16px;box-shadow:0 8px 30px rgba(43,14,54,.08)}
+.vid{position:relative;border-radius:22px;overflow:hidden;background:#000;max-width:340px;margin:0 auto}
+.vid video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover}
+.badge{position:absolute;top:14px;right:14px;background:var(--tint);color:var(--plum);font-weight:700;font-size:.85rem;padding:0 14px;border-radius:999px;pointer-events:none}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 8px}
+.card h4{font-size:1.7rem;font-weight:900;line-height:1.5}
+.card p.d{color:var(--mute)}
+.info{margin-top:18px;background:var(--bg);border:1px solid var(--line);border-radius:22px;padding:18px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.info small{display:block;color:var(--mute);font-size:.82rem}
+.info b{font-weight:700}
+
+/* آمار */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:16px 8px;text-align:center}
+.stat i{display:grid;place-items:center;width:42px;height:42px;margin:0 auto 6px;border-radius:50%;background:var(--tint);font-style:normal;font-size:1.2rem}
+.stat b{display:block;font-size:1.35rem;font-weight:900;line-height:1.4}
+.stat span{color:var(--mute);font-size:.85rem}
+.note{color:var(--mute);font-size:.85rem;margin-top:14px;text-align:center}
+
+/* تماس */
+.cc{display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:16px;margin-bottom:12px;transition:transform .2s,border-color .2s}
+a.cc:hover{border-color:var(--pink);transform:translateX(-4px)}
+.cc>i{display:grid;place-items:center;flex:none;width:52px;height:52px;border-radius:16px;background:var(--tint);font-style:normal;font-size:1.4rem}
+.cc small{display:block;color:var(--mute);font-size:.82rem}
+.cc b{font-weight:700;font-size:1.15rem}
+.cc .ltr{direction:ltr;display:inline-block}
+.cc.main{border:2px solid var(--pink)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+button.btn{font:inherit;font-weight:700;cursor:pointer;width:100%}
+
+footer{text-align:center;color:var(--mute);font-size:.88rem;padding:36px 20px 0}
+
+/* دکمه‌های شناور و منوی پایین */
+.fl{position:fixed;z-index:20;left:14px;right:14px;bottom:calc(98px + env(safe-area-inset-bottom,0px));display:flex;justify-content:space-between;gap:10px;max-width:740px;margin:0 auto;pointer-events:none}
+.fl a{pointer-events:auto;display:flex;align-items:center;gap:10px;border-radius:999px;font-weight:700;padding:12px 20px;box-shadow:0 10px 26px rgba(43,14,54,.2)}
+.fl .a{background:#fff}
+.fl .b{background:var(--grad);color:#fff;flex:1;justify-content:center;direction:ltr;font-size:1.05rem}
+.nav{position:fixed;z-index:30;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));max-width:740px;margin:0 auto;background:#fff;border-radius:30px;box-shadow:0 10px 36px rgba(43,14,54,.22);display:flex;align-items:center;justify-content:space-around;padding:8px}
+.nav a,.nav button{flex:1;display:flex;flex-direction:column;align-items:center;gap:0;font:inherit;font-size:.78rem;color:var(--mute);background:none;border:0;border-radius:20px;padding:6px 0;cursor:pointer}
+.nav svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.nav .on{background:var(--tint);color:var(--pink)}
+.nav .mid{flex:1.2;background:var(--grad);color:#fff;margin-top:-26px;padding:12px 0;border-radius:24px;box-shadow:0 10px 22px rgba(227,23,90,.35);font-weight:700}
+
+/* منوی فصول */
+.ov{position:fixed;inset:0;z-index:40;background:rgba(36,16,46,.5);opacity:0;pointer-events:none;transition:.3s}
+.sheet{position:fixed;z-index:50;left:0;right:0;bottom:0;max-width:760px;margin:0 auto;background:#fff;border-radius:32px 32px 0 0;padding:14px 18px calc(24px + env(safe-area-inset-bottom,0px));transform:translateY(105%);transition:transform .4s cubic-bezier(.2,.9,.3,1)}
+.open+.sheet,body.open .sheet{transform:none}
+body.open .ov{opacity:1;pointer-events:auto}
+.sheet .gr{width:56px;height:6px;border-radius:9px;background:var(--line);margin:0 auto 14px}
+.sh{display:flex;align-items:center;gap:12px;padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:12px}
+.sh img{width:48px;height:48px;border-radius:50%}
+.sh div{flex:1;line-height:1.5}
+.sh small{color:var(--mute)}
+.x{width:48px;height:48px;border-radius:50%;border:0;background:var(--tint);font-size:1.3rem;cursor:pointer}
+.sheet a.m{display:flex;align-items:center;gap:14px;border:1px solid var(--line);border-radius:20px;padding:12px 16px;margin-bottom:10px}
+.sheet a.m span{color:var(--mute);font-size:.9rem}
+.sheet a.m b{display:block;font-weight:700}
+.sheet a.m em{font-style:normal;margin-right:auto;color:var(--mute)}
+.sheet a.m:hover{border-color:var(--pink);background:var(--bg)}
+
+@media(max-width:420px){.stats{gap:8px}.stat b{font-size:1.15rem}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header class="hero" id="home">
+  <canvas id="px" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <img class="logo" src="logo.png" alt="لوگوی پیکسل استودیو">
+    <h1>پیکسل استودیو</h1>
+    <p class="sub">استودیو تخصصی تولید محتوا، بندرگز</p>
+    <div class="bar"></div>
+    <h2>از سناریو تا تدوین</h2>
+    <p class="d">ویدیو، ریلز و محتوای شبکه‌های اجتماعی</p>
+    <a class="btn p" href="#contact">مشاوره و سفارش ←</a>
+    <a class="btn o" href="#work">مشاهده نمونه‌کار</a>
+    <div class="chips">
+      <span class="chip">سناریونویسی</span><span class="chip">تصویربرداری</span><span class="chip">تدوین</span><span class="chip">تولید ریلز اینستاگرام</span><span class="chip">بندرگز</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="work">
+    <p class="eyebrow">نمونه‌کار</p>
+    <h3 class="t">ریل آموزشگاه موسیقی چنگ</h3>
+    <p class="lead">یک ریل معرفی برای اینستاگرام، همراه با آمار واقعی انتشار.</p>
+    <div class="card rv">
+      <div class="vid">
+        <span class="badge">ویژه</span>
+        <video controls playsinline preload="none" poster="poster.jpg"><source src="showreel.mp4" type="video/mp4"></video>
+      </div>
+      <div class="tags"><span class="chip">ریل</span><span class="chip">معرفی آموزشگاه</span><span class="chip">بندرگز</span></div>
+      <h4>آموزشگاه موسیقی چنگ</h4>
+      <p class="d">ریل معرفی آموزشگاه موسیقی چنگ در بندرگز، ساخته‌شده برای اینستاگرام.</p>
+      <div class="info">
+        <div><small>کارفرما</small><b>آموزشگاه موسیقی چنگ</b></div>
+        <div><small>شهر</small><b>بندرگز</b></div>
+        <div><small>دسته</small><b>ریل معرفی</b></div>
+        <div><small>پلتفرم</small><b>اینستاگرام</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="stats">
+    <p class="eyebrow">نتیجه</p>
+    <h3 class="t">آمار این ریل</h3>
+    <div class="stats">
+      <div class="stat rv"><i>👁️</i><b data-n="10664">۱۰٬۶۶۴</b><span>بازدید</span></div>
+      <div class="stat rv"><i>👥</i><b data-n="8601">۸٬۶۰۱</b><span>بیننده</span></div>
+      <div class="stat rv"><i>⏱️</i><b data-n="17" data-s=" ثانیه">۱۷ ثانیه</b><span>میانگین تماشا</span></div>
+      <div class="stat rv"><i>❤️</i><b data-n="411">۴۱۱</b><span>لایک</span></div>
+      <div class="stat rv"><i>💬</i><b data-n="19">۱۹</b><span>کامنت</span></div>
+      <div class="stat rv"><i>🔁</i><b data-n="12">۱۲</b><span>بازنشر</span></div>
+      <div class="stat rv"><i>✈️</i><b data-n="260">۲۶۰</b><span>اشتراک‌گذاری</span></div>
+      <div class="stat rv"><i>🔖</i><b data-n="62">۶۲</b><span>ذخیره</span></div>
+      <div class="stat rv"><i>➕</i><b data-n="112">۱۱۲</b><span>فالو جدید</span></div>
+    </div>
+    <p class="note">آمار از بخش Insights اینستاگرام (ریل آزمایشی)</p>
+  </section>
+
+  <section id="contact">
+    <p class="eyebrow">تماس با ما</p>
+    <h3 class="t">تماس و سفارش تولید محتوا</h3>
+    <p class="lead">پروژه بعدی‌تان را با ایلیا جمال شروع کنید.</p>
+    <a class="cc main" href="tel:09992209863"><i>📞</i><div><small>تماس سریع</small><b class="ltr">۰۹۹۹ ۲۲۰ ۹۸۶۳</b></div></a>
+    <a class="cc" href="https://instagram.com/PixelStuodio" target="_blank" rel="noopener"><i>📸</i><div><small>اینستاگرام پیکسل استودیو</small><b class="ltr">@PixelStuodio</b></div></a>
+    <a class="cc" href="https://instagram.com/iliyajml" target="_blank" rel="noopener"><i>🙋</i><div><small>اینستاگرام ایلیا جمال</small><b class="ltr">@iliyajml</b></div></a>
+    <div class="cc"><i>📍</i><div><small>شهر</small><b>بندرگز</b></div></div>
+    <div class="row2">
+      <a class="btn o" href="sms:09992209863">ارسال پیامک</a>
+      <button class="btn o" id="copy" type="button">کپی شماره</button>
+    </div>
+  </section>
+</main>
+
+<footer>© ۱۴۰۵ پیکسل استودیو، بندرگز</footer>
+
+<div class="fl">
+  <a class="a" href="https://instagram.com/PixelStuodio" target="_blank" rel="noopener">✈️ پیام</a>
+  <a class="b" href="tel:09992209863">📞 0999 220 9863</a>
+</div>
+
+<nav class="nav" aria-label="منوی اصلی">
+  <a href="#home" data-s="home"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>خانه</a>
+  <a href="#work" data-s="work"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 4v16M16 4v16M3 9h5M16 9h5M3 15h5M16 15h5"/></svg>نمونه‌کار</a>
+  <a class="mid" href="tel:09992209863"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>سفارش</a>
+  <a href="#contact" data-s="contact"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>تماس</a>
+  <button type="button" id="menu"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>فصول</button>
+</nav>
+
+<div class="ov" id="ov"></div>
+<aside class="sheet" aria-label="فصول سایت">
+  <div class="gr"></div>
+  <div class="sh"><img src="logo.png" alt=""><div><b>پیکسل استودیو</b><br><small>استودیو تخصصی تولید محتوا</small></div><button class="x" id="close" type="button" aria-label="بستن">✕</button></div>
+  <a class="m" href="#home"><span>۰۱</span><div><b>خانه</b><span>معرفی استودیو</span></div><em>‹</em></a>
+  <a class="m" href="#work"><span>۰۲</span><div><b>نمونه‌کار</b><span>ریل آموزشگاه موسیقی چنگ</span></div><em>‹</em></a>
+  <a class="m" href="#stats"><span>۰۳</span><div><b>آمار ریل</b><span>بازدید، لایک، اشتراک‌گذاری</span></div><em>‹</em></a>
+  <a class="m" href="#contact"><span>۰۴</span><div><b>تماس با ما</b><span>تلفن و اینستاگرام</span></div><em>‹</em></a>
+</aside>
+
+<script>
+var fa=new Intl.NumberFormat('fa-IR');
+// شبکه پیکسلی هیرو
+(function(){
+  var c=document.getElementById('px'),x=c.getContext('2d'),S=30,W,H,mx=-999,my=-999,t=0,r=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function size(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight}
+  function draw(){x.clearRect(0,0,W,H);
+    for(var i=0;i*S<W;i++)for(var j=0;j*S<H;j++){
+      var d=Math.hypot(i*S+S/2-mx,j*S+S/2-my),a=.03+.045*Math.sin(t*.02+i*.5+j*.35)+Math.max(0,1-d/150)*.5;
+      if(a<.03)continue;x.fillStyle='rgba(227,23,90,'+Math.min(a,.7)+')';x.fillRect(i*S+3,j*S+3,S-6,S-6)}
+    t++;if(!r)requestAnimationFrame(draw)}
+  size();addEventListener('resize',size);
+  var p=c.parentNode;
+  p.addEventListener('pointermove',function(e){var b=c.getBoundingClientRect();mx=e.clientX-b.left;my=e.clientY-b.top});
+  p.addEventListener('pointerleave',function(){mx=my=-999});draw();
+})();
+// ظاهر شدن کارت‌ها و شمارش آمار
+var io=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(!e.isIntersecting)return;var el=e.target;el.classList.add('in');io.unobserve(el);
+  var b=el.querySelector('b[data-n]');if(!b)return;
+  var n=+b.dataset.n,s=b.dataset.s||'',st=performance.now();
+  (function f(now){var k=Math.min((now-st)/1200,1),v=Math.round(n*(1-Math.pow(1-k,3)));
+    b.textContent=fa.format(v)+s;if(k<1)requestAnimationFrame(f)})(st);
+})},{threshold:.35});
+document.querySelectorAll('.rv').forEach(function(e){io.observe(e)});
+// منوی فصول
+var B=document.body;
+function tog(o){B.classList.toggle('open',o)}
+document.getElementById('menu').onclick=function(){tog(true)};
+document.getElementById('close').onclick=document.getElementById('ov').onclick=function(){tog(false)};
+document.querySelectorAll('.sheet a').forEach(function(a){a.onclick=function(){tog(false)}});
+// مشخص کردن بخش فعال در منوی پایین
+var links={};document.querySelectorAll('.nav a[data-s]').forEach(function(a){links[a.dataset.s]=a});
+var spy=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){for(var k in links)links[k].classList.remove('on');var l=links[e.target.id];if(l)l.classList.add('on')}})},{rootMargin:'-40% 0px -50% 0px'});
+['home','work','contact'].forEach(function(id){spy.observe(document.getElementById(id))});
+// کپی شماره
+document.getElementById('copy').onclick=function(){
+  var b=this,old=b.textContent,n='09992209863';
+  function ok(){b.textContent='کپی شد ✓';setTimeout(function(){b.textContent=old},1800)}
+  if(navigator.clipboard)navigator.clipboard.writeText(n).then(ok,ok);else ok();
+};
+</script>
+</body>
+</html>
